@@ -1,0 +1,104 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="uQ1-C9-jKu">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Navigation Controller-->
+        <scene sceneID="3Xu-xi-Tsk">
+            <objects>
+                <navigationController id="uQ1-C9-jKu" sceneMemberID="viewController">
+                    <navigationBar key="navigationBar" contentMode="scaleToFill" id="9hc-jE-NMe">
+                        <rect key="frame" x="0.0" y="44" width="414" height="44"/>
+                        <autoresizingMask key="autoresizingMask"/>
+                    </navigationBar>
+                    <connections>
+                        <segue destination="jtz-fq-lTF" kind="relationship" relationship="rootViewController" id="Kcz-yz-rND"/>
+                    </connections>
+                </navigationController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="XN8-eB-FYM" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="-146" y="67"/>
+        </scene>
+        <!--View Controller-->
+        <scene sceneID="AA5-dQ-rck">
+            <objects>
+                <viewController storyboardIdentifier="ViewController" id="jtz-fq-lTF" customClass="ViewController" customModule="PokeDexApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="jck-mm-UQO">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="Background" translatesAutoresizingMaskIntoConstraints="NO" id="fz4-YA-AOg">
+                                <rect key="frame" x="0.0" y="88" width="414" height="774"/>
+                            </imageView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="amS-1E-mgY">
+                                <rect key="frame" x="52" y="543" width="310" height="59"/>
+                                <color key="backgroundColor" red="0.95686274510000002" green="0.95686274510000002" blue="0.95686274510000002" alpha="1" colorSpace="calibratedRGB"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="59" id="HDt-aJ-Z9x"/>
+                                    <constraint firstAttribute="width" constant="310" id="h0F-FI-92F"/>
+                                </constraints>
+                                <color key="tintColor" systemColor="labelColor"/>
+                                <state key="normal" title="INICIAR"/>
+                                <connections>
+                                    <action selector="goToPokemos:" destination="jtz-fq-lTF" eventType="touchUpInside" id="Oau-hc-1Vh"/>
+                                    <action selector="pokemonsButton:" destination="3Lv-do-fKT" eventType="touchUpInside" id="tzF-QA-tbN"/>
+                                </connections>
+                            </button>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFit" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="TitleHome" translatesAutoresizingMaskIntoConstraints="NO" id="ImJ-LP-cGK">
+                                <rect key="frame" x="43" y="333" width="328" height="147"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="328" id="UmZ-GE-6er"/>
+                                    <constraint firstAttribute="height" constant="147" id="bGv-6U-shI"/>
+                                </constraints>
+                            </imageView>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="5AE-cs-hD9"/>
+                        <color key="backgroundColor" red="0.81564362195073348" green="0.23137254901960785" blue="0.31694878512928609" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="ImJ-LP-cGK" firstAttribute="top" secondItem="5AE-cs-hD9" secondAttribute="top" constant="245" id="8Ae-cx-mDc"/>
+                            <constraint firstItem="fz4-YA-AOg" firstAttribute="trailing" secondItem="5AE-cs-hD9" secondAttribute="trailing" id="EmB-Rj-lpL"/>
+                            <constraint firstItem="fz4-YA-AOg" firstAttribute="leading" secondItem="5AE-cs-hD9" secondAttribute="leading" id="NCr-I4-zMG"/>
+                            <constraint firstItem="amS-1E-mgY" firstAttribute="centerX" secondItem="ImJ-LP-cGK" secondAttribute="centerX" id="XrD-fo-zwh"/>
+                            <constraint firstItem="5AE-cs-hD9" firstAttribute="trailing" secondItem="ImJ-LP-cGK" secondAttribute="trailing" constant="43" id="Xyl-c5-p0W"/>
+                            <constraint firstItem="ImJ-LP-cGK" firstAttribute="leading" secondItem="5AE-cs-hD9" secondAttribute="leading" constant="43" id="d0a-Ek-yn6"/>
+                            <constraint firstItem="fz4-YA-AOg" firstAttribute="bottom" secondItem="5AE-cs-hD9" secondAttribute="bottom" id="jIa-04-6gd"/>
+                            <constraint firstItem="ImJ-LP-cGK" firstAttribute="centerX" secondItem="jck-mm-UQO" secondAttribute="centerX" id="pgb-cd-nd7"/>
+                            <constraint firstItem="fz4-YA-AOg" firstAttribute="top" secondItem="5AE-cs-hD9" secondAttribute="top" id="xTW-lk-Jfv"/>
+                            <constraint firstItem="5AE-cs-hD9" firstAttribute="bottom" secondItem="amS-1E-mgY" secondAttribute="bottom" constant="260" id="xrC-Ju-7dG"/>
+                        </constraints>
+                    </view>
+                    <navigationItem key="navigationItem" id="w6a-Gm-s7a"/>
+                    <connections>
+                        <outlet property="pokemonsButton" destination="amS-1E-mgY" id="vW0-xX-oQj"/>
+                        <segue destination="NWs-hz-klD" kind="show" id="lYT-3J-abo"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="uks-Od-quE" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+                <exit id="3Lv-do-fKT" userLabel="Exit" sceneMemberID="exit"/>
+            </objects>
+            <point key="canvasLocation" x="704.34782608695662" y="66.964285714285708"/>
+        </scene>
+        <!--PokemonList-->
+        <scene sceneID="DGc-o5-j31">
+            <objects>
+                <viewControllerPlaceholder storyboardIdentifier="PokemonListViewController" storyboardName="PokemonList" id="NWs-hz-klD" sceneMemberID="viewController">
+                    <navigationItem key="navigationItem" id="6wf-OO-NCr"/>
+                </viewControllerPlaceholder>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="yGk-RL-l3h" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="1315" y="81"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="Background" width="512" height="1010"/>
+        <image name="TitleHome" width="600" height="221"/>
+        <systemColor name="labelColor">
+            <color white="0.0" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>

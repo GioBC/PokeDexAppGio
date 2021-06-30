@@ -1,0 +1,82 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.Storyboard.XIB" version="3.0" toolsVersion="18122" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES" initialViewController="Y6W-OH-hqX">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="18093"/>
+        <capability name="Image references" minToolsVersion="12.0"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="System colors in document resources" minToolsVersion="11.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <scenes>
+        <!--Pokemon List View Controller-->
+        <scene sceneID="s0d-6b-0kx">
+            <objects>
+                <viewController storyboardIdentifier="PokemonListViewController" id="Y6W-OH-hqX" customClass="PokemonListViewController" customModule="PokeDexApp" customModuleProvider="target" sceneMemberID="viewController">
+                    <view key="view" contentMode="scaleToFill" id="5EZ-qb-Rvc">
+                        <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+                        <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+                        <subviews>
+                            <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" dataMode="prototypes" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="knf-aC-ffH">
+                                <rect key="frame" x="0.0" y="44" width="414" height="728"/>
+                                <color key="backgroundColor" systemColor="systemBackgroundColor"/>
+                            </tableView>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="system" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Mqe-0h-zM6">
+                                <rect key="frame" x="34" y="785.5" width="111" height="82.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="height" constant="82.5" id="CfS-Xa-7ad"/>
+                                    <constraint firstAttribute="width" constant="111" id="bEb-Lj-qnI"/>
+                                </constraints>
+                                <state key="normal">
+                                    <imageReference key="backgroundImage" image="star.fill" catalog="system" renderingMode="original"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionfavoriteButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="bga-ts-rmc"/>
+                                </connections>
+                            </button>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="c5o-7t-nfw">
+                                <rect key="frame" x="282" y="787" width="95" height="66.5"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="95" id="7VB-lS-Rfv"/>
+                                    <constraint firstAttribute="height" constant="69" id="9q0-x1-YiR"/>
+                                </constraints>
+                                <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                <state key="normal">
+                                    <imageReference key="backgroundImage" image="repeat" catalog="system" symbolScale="default" renderingMode="original"/>
+                                    <preferredSymbolConfiguration key="preferredSymbolConfiguration" scale="small"/>
+                                </state>
+                                <connections>
+                                    <action selector="actionRandomButton:" destination="Y6W-OH-hqX" eventType="touchUpInside" id="DZE-Tt-0HX"/>
+                                </connections>
+                            </button>
+                        </subviews>
+                        <viewLayoutGuide key="safeArea" id="vDu-zF-Fre"/>
+                        <color key="backgroundColor" red="0.81600017940000003" green="0.15355998360000001" blue="0.2171910085" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                        <constraints>
+                            <constraint firstItem="knf-aC-ffH" firstAttribute="trailing" secondItem="vDu-zF-Fre" secondAttribute="trailing" id="M15-RU-gVa"/>
+                            <constraint firstItem="knf-aC-ffH" firstAttribute="top" secondItem="vDu-zF-Fre" secondAttribute="top" id="OVh-7k-cf3"/>
+                            <constraint firstAttribute="bottom" secondItem="Mqe-0h-zM6" secondAttribute="bottom" constant="27.5" id="YNv-Vr-5TJ"/>
+                            <constraint firstItem="knf-aC-ffH" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" id="d6t-Fa-mdM"/>
+                            <constraint firstItem="knf-aC-ffH" firstAttribute="bottom" secondItem="vDu-zF-Fre" secondAttribute="bottom" constant="-90" id="fSu-Ar-gBv"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="trailing" secondItem="c5o-7t-nfw" secondAttribute="trailing" constant="37" id="gcc-MJ-U2j"/>
+                            <constraint firstItem="Mqe-0h-zM6" firstAttribute="leading" secondItem="vDu-zF-Fre" secondAttribute="leading" constant="34" id="sOa-rz-0qF"/>
+                            <constraint firstItem="vDu-zF-Fre" firstAttribute="bottom" secondItem="c5o-7t-nfw" secondAttribute="bottom" constant="7" id="wpq-cM-KVH"/>
+                        </constraints>
+                    </view>
+                    <connections>
+                        <outlet property="pokemonListTable" destination="knf-aC-ffH" id="gyC-Me-Eey"/>
+                    </connections>
+                </viewController>
+                <placeholder placeholderIdentifier="IBFirstResponder" id="Ief-a0-LHa" userLabel="First Responder" customClass="UIResponder" sceneMemberID="firstResponder"/>
+            </objects>
+            <point key="canvasLocation" x="95.652173913043484" y="88.392857142857139"/>
+        </scene>
+    </scenes>
+    <resources>
+        <image name="repeat" catalog="system" width="128" height="99"/>
+        <image name="star.fill" catalog="system" width="128" height="116"/>
+        <systemColor name="systemBackgroundColor">
+            <color white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+        </systemColor>
+    </resources>
+</document>
